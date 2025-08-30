@@ -187,6 +187,20 @@ namespace Demo
 
             #endregion
 
+            #region Function can return other functions
+            //Action action = FunctionReturnDelegate.DelegateAction(); // Do Nothing
+
+            //action.Invoke();
+
+            //FunctionReturnDelegate.DelegateAction()();
+
+           
+            #endregion
+
+        }
+        public static bool Check(int number)
+        {
+            return number == 10;
         }
     }
 }
