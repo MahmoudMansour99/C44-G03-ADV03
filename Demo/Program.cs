@@ -20,7 +20,7 @@ namespace Demo
             //StringFincDelegate stringFunc;
 
             //// 2. Initialize Referance from Delegate [Pointer to Function]
-            ////stringFunc = new StringFincDelegate(StringFunctions.GetCountOfUpperCase);
+            //stringFunc = new StringFincDelegate(StringFunctions.GetCountOfUpperCase);
 
             //stringFunc = StringFunctions.GetCountOfUpperCase;
 
@@ -89,23 +89,47 @@ namespace Demo
 
             //List<string> names = new List<string>() { "Ahmed", "Aya", "Khaked", "Rawan", "Amr", "Heba", "Hadeer"};
 
-            List<string> Names = ["Ahmed", "Aya", "Khaked", "Rawan", "Amr", "Heba", "Heba"];
+            //List<string> Names = ["Ahmed", "Aya", "Khaked", "Rawan", "Amr", "Heba", "Heba"];
 
-            List<string> filterName01 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthLessThanFour);
+            //List<string> filterName01 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthLessThanFour);
 
-            foreach (var item in filterName01)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in filterName01)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            List<string> filterName02 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthMoreThanFour);
+            //List<string> filterName02 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthMoreThanFour);
 
-            foreach (var item in filterName02)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in filterName02)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
+
+            #endregion
+
+            #region Built In Delegate
+
+            //Predicate<int> predicate = TestBuiltInDelegate.CheckPositive;
+
+            //bool flag = predicate.Invoke(10);
+
+            //Console.WriteLine(flag);
+
+            //Func<int, string> func = TestBuiltInDelegate.Casting;
+            //string number = func.Invoke(42);
+
+            //Console.WriteLine(number);
+
+            //Action action = TestBuiltInDelegate.Print;
+
+            //action.Invoke();
+
+            //Action<string> action = TestBuiltInDelegate.Print;
+            //action.Invoke("Mahmoud");
+
+
 
             #endregion
 
