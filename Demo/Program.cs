@@ -162,6 +162,31 @@ namespace Demo
             //Console.WriteLine(predicate.Invoke(32));
             #endregion
 
+            #region List<T>Methods Take Function as Parametr
+            //List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            //numbers.Exists(number => number == 10);
+
+            ////Console.WriteLine(numbers.Exists(number => number == 10));
+
+            //int number = numbers.Find(number => number % 2 == 0);
+            //number = numbers.FindLast(number => number % 2 == 0);
+            //number = numbers.FindLastIndex(number => number % 2 == 0);
+            //Console.WriteLine(number);
+
+            //List<int> oddNumbers = numbers.FindAll(X => X % 2 == 0);
+
+            //numbers.ForEach(x => Console.WriteLine(x));
+
+            //bool flag = numbers.TrueForAll(x => x % 2 == 0);
+
+            //Console.WriteLine(flag);
+
+
+
+
+            #endregion
+
         }
     }
 }
