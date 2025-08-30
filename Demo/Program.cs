@@ -36,16 +36,30 @@
 
             #region Example 02
 
-            int[] numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
+            //int[] numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
 
-            //SortingAlgorithm.BubbleSort(numbers);
-            //SortingAlgorithm.BubbleSort(numbers, SortingTypes.CompareGreater);
+            ////SortingAlgorithm.BubbleSort(numbers);
+            ////SortingAlgorithm.BubbleSort(numbers, SortingTypes.CompareGreater);
 
-            SortTypesFuncDelegate sortingTypes = SortingTypes.CompareLess;
+            //SortTypesFuncDelegate<int> sortingTypes = SortingTypes.CompareLess;
 
-            SortingAlgorithm.BubbleSort(numbers, sortingTypes);
+            //SortingAlgorithm<int>.BubbleSort(numbers, sortingTypes);
 
-            foreach (var item in numbers)
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            string[] names = { "Omar", "Mohamed", "Amr", "Salma" };
+
+            SortingAlgorithm<string>.BubbleSort(names, SortingTypes.SortAsc);
+
+            SortTypesFuncDelegate<string, string, bool> sortingTypes = SortingTypes.SortDesc;
+
+            SortingAlgorithm<string>.BubbleSort(names, sortingTypes);
+
+
+            foreach (var item in names)
             {
                 Console.WriteLine(item);
             }
