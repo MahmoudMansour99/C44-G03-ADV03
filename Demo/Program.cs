@@ -10,25 +10,50 @@
     {
         static void Main(string[] args)
         {
+            #region Delegate
+
+            #region Example 01
             //int x = StringFunctions.GetCountOfUpperCase(); // Invalid
             // 1. Declare Referance from Delegate
-            StringFincDelegate stringFunc;
+            //StringFincDelegate stringFunc;
 
-            // 2. Initialize Referance from Delegate [Pointer to Function]
-            //stringFunc = new StringFincDelegate(StringFunctions.GetCountOfUpperCase);
+            //// 2. Initialize Referance from Delegate [Pointer to Function]
+            ////stringFunc = new StringFincDelegate(StringFunctions.GetCountOfUpperCase);
 
-            stringFunc = StringFunctions.GetCountOfUpperCase;
+            //stringFunc = StringFunctions.GetCountOfUpperCase;
 
-            stringFunc += StringFunctions.GetCountOfLowerCase;
-            stringFunc -= StringFunctions.GetCountOfLowerCase;
+            //stringFunc += StringFunctions.GetCountOfLowerCase;
+            //stringFunc -= StringFunctions.GetCountOfLowerCase;
 
 
-            // 3. use Delegate Referance [Call Method]
+            //// 3. use Delegate Referance [Call Method]
 
-            int Result = stringFunc?.Invoke("RouTe") ?? 0;
-            //Result = stringFunc.Invoke("MahmoUd ManSOuR");
+            //int Result = stringFunc?.Invoke("RouTe") ?? 0;
+            ////Result = stringFunc.Invoke("MahmoUd ManSOuR");
 
-            Console.WriteLine(Result);
+            //Console.WriteLine(Result);
+            #endregion
+
+            #region Example 02
+
+            int[] numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
+
+            //SortingAlgorithm.BubbleSort(numbers);
+            //SortingAlgorithm.BubbleSort(numbers, SortingTypes.CompareGreater);
+
+            SortTypesFuncDelegate sortingTypes = SortingTypes.CompareLess;
+
+            SortingAlgorithm.BubbleSort(numbers, sortingTypes);
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            #endregion
+
+            #endregion
+
         }
     }
 }
