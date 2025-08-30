@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Demo
 {
     public delegate int StringFincDelegate(string s); 
     // New Delegate [Class]
@@ -68,21 +70,39 @@
 
             #region Example 03
 
-            List<int> Numbers = Enumerable.Range(1, 100).ToList();
+            //List<int> Numbers = Enumerable.Range(1, 100).ToList();
 
-            //List<int> OddNumbers = FilterLists.FindOddNumbers(Numbers);
+            ////List<int> OddNumbers = FilterLists.FindOddNumbers(Numbers);
 
 
-            List<int> OddNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckOdd);
-            foreach (var item in OddNumbers)
+            //List<int> OddNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckOdd);
+            //foreach (var item in OddNumbers)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            //List<int> EvenNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckEven);
+
+            //foreach (var item in EvenNumbers)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            //List<string> names = new List<string>() { "Ahmed", "Aya", "Khaked", "Rawan", "Amr", "Heba", "Hadeer"};
+
+            List<string> Names = ["Ahmed", "Aya", "Khaked", "Rawan", "Amr", "Heba", "Heba"];
+
+            List<string> filterName01 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthLessThanFour);
+
+            foreach (var item in filterName01)
             {
-                Console.Write($"{item} ");
+                Console.WriteLine(item);
             }
-            List<int> EvenNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckEven);
 
-            foreach (var item in EvenNumbers)
+            List<string> filterName02 = FilterLists.FindElemets(Names, FilterOfList.CheckLengthMoreThanFour);
+
+            foreach (var item in filterName02)
             {
-                Console.Write($"{item} ");
+                Console.WriteLine(item);
             }
 
             #endregion

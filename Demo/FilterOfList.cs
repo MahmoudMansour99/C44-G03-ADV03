@@ -17,5 +17,13 @@ namespace Demo
         {
             return number % 2 == 0;
         }
+        public static bool CheckLengthLessThanFour(string name)
+        {
+            return name?.Length < 4;
+        }
+        public static bool CheckLengthMoreThanFour(string name)
+        {
+            return name?.Length > 4;
+        }
     }
 }

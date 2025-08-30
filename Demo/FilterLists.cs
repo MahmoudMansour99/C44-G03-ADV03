@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public delegate bool FilterFuncDelegate(int a);
+    public delegate bool FilterFuncDelegate<T>(T a);
     internal static class FilterLists
     {
-        public static List<int> FindElemets(List<int> numbers, FilterFuncDelegate filter)
+        public static List<T> FindElemets<T>(List<T> numbers, FilterFuncDelegate<T> filter)
         {
-            List<int> Result = new List<int>();
+            List<T> Result = new List<T>();
             if (numbers?.Count > 0 && filter is not null)
             {
                 for (int i = 0; i < numbers.Count; i++)
