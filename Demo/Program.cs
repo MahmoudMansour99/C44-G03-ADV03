@@ -50,18 +50,39 @@
             //    Console.WriteLine(item);
             //}
 
-            string[] names = { "Omar", "Mohamed", "Amr", "Salma" };
+            //string[] names = { "Omar", "Mohamed", "Amr", "Salma" };
 
-            SortingAlgorithm<string>.BubbleSort(names, SortingTypes.SortAsc);
+            //SortingAlgorithm<string>.BubbleSort(names, SortingTypes.SortAsc);
 
-            SortTypesFuncDelegate<string, string, bool> sortingTypes = SortingTypes.SortDesc;
+            //SortTypesFuncDelegate<string, string, bool> sortingTypes = SortingTypes.SortDesc;
 
-            SortingAlgorithm<string>.BubbleSort(names, sortingTypes);
+            //SortingAlgorithm<string>.BubbleSort(names, sortingTypes);
 
 
-            foreach (var item in names)
+            //foreach (var item in names)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Example 03
+
+            List<int> Numbers = Enumerable.Range(1, 100).ToList();
+
+            //List<int> OddNumbers = FilterLists.FindOddNumbers(Numbers);
+
+
+            List<int> OddNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckOdd);
+            foreach (var item in OddNumbers)
             {
-                Console.WriteLine(item);
+                Console.Write($"{item} ");
+            }
+            List<int> EvenNumbers = FilterLists.FindElemets(Numbers, FilterOfList.CheckEven);
+
+            foreach (var item in EvenNumbers)
+            {
+                Console.Write($"{item} ");
             }
 
             #endregion
