@@ -133,6 +133,35 @@ namespace Demo
 
             #endregion
 
+            #region Anonymous Methods
+            //Action action01 = delegate () { Console.WriteLine("Hello Route"); };
+            //action01();
+
+            //Action<string> action02 = delegate (string name) { Console.WriteLine($"Hello {name}"); };
+            //action02("Mahmoud");
+
+            //Func<int, string> func = delegate (int number) { return number.ToString(); };
+            //Console.WriteLine(func.Invoke(32));
+
+            //Predicate<int> predicate = delegate (int number) { return number > 0; };
+            //Console.WriteLine(predicate.Invoke(32));
+
+            #endregion
+
+            #region Lambda Expression
+            //Action action01 = () => { Console.WriteLine("Hello Route"); };
+            //action01();
+
+            //Action<string> action02 = (name) =>{ Console.WriteLine($"Hello {name}"); };
+            //action02("Mahmoud");
+
+            //Func<int, string> func = (number) => { return number.ToString(); };
+            //Console.WriteLine(func.Invoke(32));
+
+            //Predicate<int> predicate = (number) => { return number > 0; };
+            //Console.WriteLine(predicate.Invoke(32));
+            #endregion
+
         }
     }
 }

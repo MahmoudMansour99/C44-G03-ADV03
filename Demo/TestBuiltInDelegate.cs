@@ -8,10 +8,7 @@ namespace Demo
 {
     internal static class TestBuiltInDelegate
     {
-        public static bool CheckPositive(int number)
-        {
-            return number > 0;
-        }
+        public static bool CheckPositive(int number) { return number > 0;}
 
         public static string Casting(int number)
         {
